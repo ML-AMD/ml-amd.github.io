@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thrusts | MLAMD Center</title>
+    <meta name="description" content="MLAMD Center project page." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="MLAMD Center home">
+        <img class="brand-logo" src="assets/doe-seal.png" alt="U.S. Department of Energy seal" />
+        <span>
+          <strong>MLAMD Center</strong>
+          <small>AI/ML + exascale computing</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Overview</a>
+        <a class="is-active" href="thrusts.html">Thrusts</a>
+        <a href="progress.html">Progress</a>
+        <a href="publications.html">Publications</a>
+        <a href="data.html">Data</a>
+        <a href="people.html">People</a>
+        <a href="roadmap.html">Roadmap</a>
+      </nav>
+    </header>
+    <main id="top">
+      <section class="people-hero page-hero">
+        <div>
+          <p class="eyebrow">Research thrusts</p>
+          <h1>Discovery and synthesis pathways</h1>
+          <p class="lead">exa-AMD searches composition-structure-property spaces, while exa-PD predicts thermodynamics and synthesis pathways.</p>
+        </div>
+      </section>
+<section id="thrusts" class="section thrusts">
+        <div class="section-heading wide">
+          <p class="eyebrow">Integrated research thrusts</p>
+          <h2>Two complementary workflows for discovering materials and synthesis pathways</h2>
+        </div>
+
+        <article id="thrust-1" class="thrust-row">
+          <div class="thrust-copy">
+            <p class="label">Thrust 1 | exa-AMD</p>
+            <h3>AI/ML-assisted materials discovery and design</h3>
+            <p>
+              exa-AMD is a Python workflow framework that integrates materials databases, CGCNN and other ML models,
+              MLIP relaxation, adaptive genetic algorithms, DFT validation, and convex-hull analysis through Parsl.
+              The goal is rapid exploration of ternary, quaternary, and higher-order composition-structure spaces.
+            </p>
+            <ul class="compact-list">
+              <li>Open-source workflow released through the ML-AMD organization.</li>
+              <li>Demonstrated scalable screening and DFT validation for new stable and metastable compounds.</li>
+              <li>Current expansion targets beyond-ternary structure libraries, MLIP-accelerated AGA, disorder modules, and agentic workflow control.</li>
+            </ul>
+          </div>
+          <figure class="media-panel">
+            <img src="assets/cefein-prediction.png" alt="exa-AMD predicted convex hull and Ce-Fe-In crystal structure output" />
+            <figcaption>Example exa-AMD output: predicted convex hull and candidate structure for a Ce-Fe-In search.</figcaption>
+          </figure>
+        </article>
+
+        <article id="thrust-2" class="thrust-row reverse">
+          <div class="thrust-copy">
+            <p class="label">Thrust 2 | exa-PD</p>
+            <h3>Exascale phase diagrams and synthesis-pathway prediction</h3>
+            <p>
+              exa-PD develops a massively parallel workflow for multi-element phase-diagram construction and
+              synthesis-pathway insight. Parsl coordinates hundreds of dependent molecular-dynamics jobs, neural
+              network potentials extend length and time scales, and thermodynamic integration plus CALPHAD analysis
+              convert simulation output into reusable phase-diagram data.
+            </p>
+            <ul class="compact-list">
+              <li>Module I focuses on accurate free energies and phase diagrams from MD and thermodynamic integration.</li>
+              <li>Modules II and III extend the workflow toward nucleation, growth kinetics, and liquid-structure descriptors.</li>
+              <li>The software path supports standard thermodynamic database outputs and ML-guided precision synthesis.</li>
+            </ul>
+          </div>
+          <figure class="media-panel">
+            <img src="assets/exa-pd-workflow.png" alt="exa-PD workflow connecting LAMMPS, neural network potentials, MD, thermodynamics, kinetics, and Parsl" />
+            <figcaption>exa-PD links atomistic simulation, ML potentials, thermodynamic modeling, and global workflow control.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      
+    </main>
+    <footer class="site-footer">
+      <div>
+        <strong>MLAMD Center</strong>
+        <p>Supported by the U.S. Department of Energy, Office of Science, Basic Energy Sciences, Materials Science and Engineering Division through the Computational Materials Science Center program.</p>
+        <p class="maintainer">Maintained by <a href="https://shdejavu.github.io/">Weiyi Xia</a>.</p>
+      </div>
+      <nav aria-label="Related links">
+        <a href="https://www.ameslab.gov/machine-learning-accelerated-materials-discovery-center">Ames Lab center page</a>
+        <a href="https://ml-material.physics.iastate.edu/">ISU ML materials page</a>
+        <a href="https://ml-amd.github.io/exa-amd/">exa-AMD documentation</a>
+        <a href="https://ml-amd.github.io/exa-pd/">exa-PD documentation</a>
+      </nav>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

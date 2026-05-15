@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Publications | MLAMD Center</title>
+    <meta name="description" content="MLAMD Center project page." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="MLAMD Center home">
+        <img class="brand-logo" src="assets/doe-seal.png" alt="U.S. Department of Energy seal" />
+        <span>
+          <strong>MLAMD Center</strong>
+          <small>AI/ML + exascale computing</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Overview</a>
+        <a href="thrusts.html">Thrusts</a>
+        <a href="progress.html">Progress</a>
+        <a class="is-active" href="publications.html">Publications</a>
+        <a href="data.html">Data</a>
+        <a href="people.html">People</a>
+        <a href="roadmap.html">Roadmap</a>
+      </nav>
+    </header>
+    <main id="top">
+      <section class="people-hero page-hero">
+        <div>
+          <p class="eyebrow">Publications</p>
+          <h1>Software papers, preprints, and manuscript pipeline</h1>
+          <p class="lead">Publications and manuscript outputs that connect workflow development to magnetic and functional materials applications.</p>
+        </div>
+      </section>
+<section id="publications" class="section publications">
+        <div class="section-heading wide">
+          <p class="eyebrow">Outputs</p>
+          <h2>Publications and outputs</h2>
+        </div>
+        <div class="publication-grid">
+          <article class="publication-card">
+            <p class="label">Software paper</p>
+            <h3>exa-AMD: A scalable workflow for accelerating AI-assisted materials discovery and design</h3>
+            <p>
+              Journal of Open Source Software, 2025. Establishes the exa-AMD workflow architecture, modular
+              discovery stages, and community software release.
+            </p>
+            <a href="https://joss.theoj.org/papers/10.21105/joss.08879">Read the JOSS paper</a>
+          </article>
+          <article class="publication-card">
+            <p class="label">Preprint</p>
+            <h3>exaPD: a highly parallelizable workflow for multi-element phase-diagram construction</h3>
+            <p>
+              arXiv, 2025. Introduces the exa-PD workflow for phase-diagram prediction through massively parallel
+              free-energy and molecular-dynamics calculations.
+            </p>
+            <a href="https://arxiv.org/abs/2510.01400">Read the preprint</a>
+          </article>
+          <article class="publication-card">
+            <p class="label">Manuscript pipeline</p>
+            <h3>Application papers in magnetic and functional materials</h3>
+            <p>
+              Ongoing work includes Y-Mn-B and Y-Mn-Fe-B discovery, R-Mn-B extensions, AGA+MLIP demonstrations,
+              and beyond-ternary magnetic-material searches.
+            </p>
+            <a href="#roadmap">View planned deliverables</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section science-visuals" aria-label="Workflow visuals">
+        <figure class="wide-figure">
+          <img src="assets/exa-amd-workflow.png" alt="Five-stage exa-AMD workflow from structure generation to post-processing" />
+          <figcaption>exa-AMD workflow: structure generation, ML screening, selection, first-principles calculations, and post-processing.</figcaption>
+        </figure>
+        <figure class="wide-figure">
+          <img src="assets/nnp-md-schematic.png" alt="Neural network potential schematic for molecular dynamics simulations" />
+          <figcaption>Neural network potentials enable exa-PD to extend atomistic simulation length and time scales.</figcaption>
+        </figure>
+      </section>
+
+      
+    </main>
+    <footer class="site-footer">
+      <div>
+        <strong>MLAMD Center</strong>
+        <p>Supported by the U.S. Department of Energy, Office of Science, Basic Energy Sciences, Materials Science and Engineering Division through the Computational Materials Science Center program.</p>
+        <p class="maintainer">Maintained by <a href="https://shdejavu.github.io/">Weiyi Xia</a>.</p>
+      </div>
+      <nav aria-label="Related links">
+        <a href="https://www.ameslab.gov/machine-learning-accelerated-materials-discovery-center">Ames Lab center page</a>
+        <a href="https://ml-material.physics.iastate.edu/">ISU ML materials page</a>
+        <a href="https://ml-amd.github.io/exa-amd/">exa-AMD documentation</a>
+        <a href="https://ml-amd.github.io/exa-pd/">exa-PD documentation</a>
+      </nav>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

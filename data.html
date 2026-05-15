@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Code and Data | MLAMD Center</title>
+    <meta name="description" content="MLAMD Center project page." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="MLAMD Center home">
+        <img class="brand-logo" src="assets/doe-seal.png" alt="U.S. Department of Energy seal" />
+        <span>
+          <strong>MLAMD Center</strong>
+          <small>AI/ML + exascale computing</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Overview</a>
+        <a href="thrusts.html">Thrusts</a>
+        <a href="progress.html">Progress</a>
+        <a href="publications.html">Publications</a>
+        <a class="is-active" href="data.html">Data</a>
+        <a href="people.html">People</a>
+        <a href="roadmap.html">Roadmap</a>
+      </nav>
+    </header>
+    <main id="top">
+      <section class="people-hero page-hero">
+        <div>
+          <p class="eyebrow">Code and Data</p>
+          <h1>Software, datasets, and databases</h1>
+          <p class="lead">OSTI and Zenodo records for exa-AMD, exa-PD, curated structure libraries, magnetic-materials datasets, and databases.</p>
+        </div>
+      </section>
+
+      <section id="data" class="section data-section">
+        <div class="section-heading wide">
+          <p class="eyebrow">Code and Data</p>
+          <h2>Software and data</h2>
+          <p class="section-intro">
+            The center is building a public record of software releases, curated structure libraries, and
+            materials datasets. When the same resource has both OSTI and Zenodo records, the OSTI record is shown
+            as the primary citation path.
+          </p>
+        </div>
+        <div class="data-grid">
+          <article class="data-card featured-data">
+            <p class="label">Software</p>
+            <h3>ML-AMD/exa-amd</h3>
+            <p>
+              A Python workflow framework for accelerating AI/ML-assisted materials discovery through scalable
+              structure generation, ML screening, DFT validation, and convex-hull analysis.
+            </p>
+            <dl class="data-meta">
+              <div><dt>OSTI ID</dt><dd>code-156263</dd></div>
+              <div><dt>DOI</dt><dd>10.11578/dc.20250530.10</dd></div>
+              <div><dt>License</dt><dd>BSD 3-clause</dd></div>
+            </dl>
+            <div class="data-links">
+              <a href="https://www.osti.gov/biblio/code-156263">OSTI</a>
+              <a href="https://github.com/ML-AMD/exa-amd">GitHub</a>
+              <a href="https://ml-amd.github.io/exa-amd/">Docs</a>
+              <a href="https://zenodo.org/records/17477448">Zenodo</a>
+            </div>
+          </article>
+
+          <article class="data-card featured-data">
+            <p class="label">Software</p>
+            <h3>ML-AMD/exa-pd</h3>
+            <p>
+              A highly parallelizable workflow for multi-element phase-diagram construction using LAMMPS,
+              MD/MC sampling, Parsl workflow control, thermodynamic integration, and pycalphad modeling.
+            </p>
+            <dl class="data-meta">
+              <div><dt>OSTI ID</dt><dd>code-173852</dd></div>
+              <div><dt>DOI</dt><dd>10.11578/dc.20260127.1</dd></div>
+              <div><dt>Format</dt><dd>Python 3.10</dd></div>
+            </dl>
+            <div class="data-links">
+              <a href="https://www.osti.gov/biblio/code-173852">OSTI</a>
+              <a href="https://github.com/ML-AMD/exa-pd">GitHub</a>
+              <a href="https://ml-amd.github.io/exa-pd/">Docs</a>
+            </div>
+          </article>
+
+          <article class="data-card">
+            <p class="label">Dataset</p>
+            <h3>Prototype crystal structures for exa-AMD framework</h3>
+            <p>
+              A curated initial-structure library for exa-AMD, including 36,553 ternary and 5,254 quaternary
+              unique structures sourced from public databases and formatted in CIF.
+            </p>
+            <dl class="data-meta">
+              <div><dt>OSTI ID</dt><dd>2589191</dd></div>
+              <div><dt>DOI</dt><dd>10.5281/zenodo.17180192</dd></div>
+              <div><dt>Type</dt><dd>Dataset</dd></div>
+            </dl>
+            <div class="data-links">
+              <a href="https://www.osti.gov/biblio/2589191">OSTI</a>
+              <a href="https://zenodo.org/records/17180192">Zenodo</a>
+            </div>
+          </article>
+
+          <article class="data-card">
+            <p class="label">Dataset</p>
+            <h3>Fe-Co-Zr Magnetic Materials: A DFT and Machine Learning Dataset</h3>
+            <p>
+              Computational data, structural information, phonon/AIMD validation files, and ML-vs-DFT comparison
+              data supporting Fe-Co-Zr rare-earth-free magnet discovery.
+            </p>
+            <dl class="data-meta">
+              <div><dt>Record</dt><dd>Zenodo 17477290</dd></div>
+              <div><dt>DOI</dt><dd>10.5281/zenodo.17477290</dd></div>
+              <div><dt>Type</dt><dd>Dataset</dd></div>
+            </dl>
+            <div class="data-links">
+              <a href="https://zenodo.org/records/17477290">Zenodo</a>
+            </div>
+          </article>
+
+          <article class="data-card">
+            <p class="label">Database</p>
+            <h3>Novomag magnetic materials database</h3>
+            <p>
+              A magnetic-materials database with 3,826 entries, including Fe-based rare-earth-free magnets
+              discovered through adaptive genetic algorithm searches.
+            </p>
+            <dl class="data-meta">
+              <div><dt>Record</dt><dd>Zenodo 17399362</dd></div>
+              <div><dt>DOI</dt><dd>10.5281/zenodo.17399362</dd></div>
+              <div><dt>Type</dt><dd>Database</dd></div>
+            </dl>
+            <div class="data-links">
+              <a href="https://zenodo.org/records/17399362">Zenodo</a>
+              <a href="https://www.novomag.physics.iastate.edu/structure-database">Database portal</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div>
+        <strong>MLAMD Center</strong>
+        <p>Supported by the U.S. Department of Energy, Office of Science, Basic Energy Sciences, Materials Science and Engineering Division through the Computational Materials Science Center program.</p>
+        <p class="maintainer">Maintained by <a href="https://shdejavu.github.io/">Weiyi Xia</a>.</p>
+      </div>
+      <nav aria-label="Related links">
+        <a href="https://www.ameslab.gov/machine-learning-accelerated-materials-discovery-center">Ames Lab center page</a>
+        <a href="https://ml-material.physics.iastate.edu/">ISU ML materials page</a>
+        <a href="https://ml-amd.github.io/exa-amd/">exa-AMD documentation</a>
+        <a href="https://ml-amd.github.io/exa-pd/">exa-PD documentation</a>
+      </nav>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
