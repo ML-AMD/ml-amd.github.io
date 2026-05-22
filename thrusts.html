@@ -40,8 +40,8 @@
           <h2>Two complementary workflows for discovering materials and synthesis pathways</h2>
         </div>
 
-        <article id="thrust-1" class="thrust-row">
-          <div class="thrust-copy">
+        <article id="thrust-1" class="thrust-block thrust-block-amd">
+          <div class="thrust-block-heading">
             <p class="label">Thrust 1 | exa-AMD</p>
             <h3>AI/ML-assisted materials discovery and design</h3>
             <p>
@@ -49,20 +49,87 @@
               MLIP relaxation, adaptive genetic algorithms, DFT validation, and convex-hull analysis through Parsl.
               The goal is rapid exploration of ternary, quaternary, and higher-order composition-structure spaces.
             </p>
-            <ul class="compact-list">
-              <li>Open-source workflow released through the ML-AMD organization.</li>
-              <li>Demonstrated scalable screening and DFT validation for new stable and metastable compounds.</li>
-              <li>Current expansion targets beyond-ternary structure libraries, MLIP-accelerated AGA, disorder modules, and agentic workflow control.</li>
-            </ul>
           </div>
-          <figure class="media-panel">
-            <img src="assets/cefein-prediction.png" alt="exa-AMD predicted convex hull and Ce-Fe-In crystal structure output" />
-            <figcaption>Example exa-AMD output: predicted convex hull and candidate structure for a Ce-Fe-In search.</figcaption>
-          </figure>
+
+          <div class="thrust-row">
+            <div class="thrust-copy">
+              <h4>Overview workflow</h4>
+              <p>
+                The exa-AMD workflow starts from prototype structures and composition substitutions, uses machine
+                learning to prioritize promising candidates, validates selected structures with first-principles
+                calculations, and closes the loop with convex-hull and stability analysis.
+              </p>
+              <ul class="compact-list module-list">
+                <li>
+                  <strong>Module I: scalable ML screening.</strong>
+                  Generate prototype-derived candidate structures, predict formation energies with CGCNN, select
+                  low-energy structures, and send candidates through DFT validation and convex-hull post-processing.
+                </li>
+                <li>
+                  <strong>Module II: MLIP relaxation and hull sorting.</strong>
+                  Insert machine-learning interatomic-potential relaxation before DFT to accelerate local relaxation,
+                  candidate ranking, and preparation of high-value structures for first-principles calculations.
+                </li>
+                <li>
+                  <strong>Module III: AGA + MLIP structure search.</strong>
+                  Use adaptive genetic algorithms with GPU-ready MLIP relaxation to predict new structure types from
+                  chemical composition alone, then feed promising results back into DFT and ML refinement.
+                </li>
+              </ul>
+            </div>
+            <figure class="media-panel thrust-overview-figure">
+              <img src="assets/exa-amd-overview.png" alt="exa-AMD workflow for structure generation, formation-energy prediction, structure selection, first-principles calculations, and post-processing" />
+              <figcaption>exa-AMD overview workflow connecting structure generation, ML screening, DFT validation, and post-processing.</figcaption>
+            </figure>
+          </div>
+
+          <div class="thrust-subsection">
+            <div class="thrust-copy">
+              <h4>Research progress</h4>
+              <p>
+                The framework is ready for applications to search for ternary compounds. The speedup of the framework
+                scales almost linearly with the number of GPUs. For any ternary system with three chemical elements, it
+                produces a map of comprehensive composition-structure-energy landscape in just a few hours. About 1000
+                candidate structures were selected from CGCNN for first-principles calculations. Using 32 GPUs on
+                <a href="https://docs.nersc.gov/systems/perlmutter/architecture/">Perlmutter at NERSC</a>, the energy
+                calculations completed in about 3-4 hours. For most ternary systems, about 2000 candidate structures per
+                system will be selected for DFT calculations, which can complete within a few hours using 64 GPUs. The
+                framework can also perform searches for many ternary systems simultaneously, scaling to several thousand
+                GPUs when sufficient resources are available.
+              </p>
+            </div>
+            <div class="thrust-progress-figures">
+              <figure class="media-panel">
+                <img src="assets/exa-amd-scaling.png" alt="exa-AMD scaling plot showing near-linear performance as GPUs increase" />
+                <figcaption>GPU scaling performance for exa-AMD workflow execution on leadership-class resources.</figcaption>
+              </figure>
+              <figure class="media-panel">
+                <img src="assets/cefein-prediction.png" alt="exa-AMD predicted convex hull and Ce-Fe-In crystal structure output" />
+                <figcaption>Current exa-AMD progress example: predicted convex hull and candidate structure from a Ce-Fe-In search.</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="thrust-subsection thrust-publication-note">
+            <div>
+              <h4>Paper and code</h4>
+              <p>
+                The exa-AMD workflow has been released as open-source software and documented in a citable software
+                paper. The public release provides workflow modules for structure generation, ML screening,
+                first-principles validation, and post-processing.
+              </p>
+            </div>
+            <div class="thrust-link-row">
+              <a href="https://joss.theoj.org/papers/10.21105/joss.08879">Paper</a>
+              <a href="https://github.com/ML-AMD/exa-amd">GitHub</a>
+              <a href="https://www.osti.gov/biblio/code-156263">OSTI</a>
+              <a href="https://ml-amd.github.io/exa-amd/">Docs</a>
+            </div>
+          </div>
         </article>
 
-        <article id="thrust-2" class="thrust-row reverse">
-          <div class="thrust-copy">
+        <article id="thrust-2" class="thrust-block thrust-block-pd">
+          <div class="thrust-block-heading">
             <p class="label">Thrust 2 | exa-PD</p>
             <h3>Exascale phase diagrams and synthesis-pathway prediction</h3>
             <p>
@@ -71,16 +138,76 @@
               network potentials extend length and time scales, and thermodynamic integration plus CALPHAD analysis
               convert simulation output into reusable phase-diagram data.
             </p>
-            <ul class="compact-list">
-              <li>Module I focuses on accurate free energies and phase diagrams from MD and thermodynamic integration.</li>
-              <li>Modules II and III extend the workflow toward nucleation, growth kinetics, and liquid-structure descriptors.</li>
-              <li>The software path supports standard thermodynamic database outputs and ML-guided precision synthesis.</li>
-            </ul>
           </div>
-          <figure class="media-panel">
-            <img src="assets/exa-pd-workflow.png" alt="exa-PD workflow connecting LAMMPS, neural network potentials, MD, thermodynamics, kinetics, and Parsl" />
-            <figcaption>exa-PD links atomistic simulation, ML potentials, thermodynamic modeling, and global workflow control.</figcaption>
-          </figure>
+
+          <div class="thrust-row reverse">
+            <div class="thrust-copy">
+              <h4>Overview workflow</h4>
+              <p>
+                Thrust 2 connects LAMMPS molecular dynamics, empirical or machine-learning interatomic potentials,
+                ab initio training calculations, thermodynamic integration, CALPHAD modeling, liquid-structure
+                descriptors, and kinetic modeling under Parsl workflow control.
+              </p>
+              <ul class="compact-list module-list">
+                <li>
+                  <strong>Module I: exa-PD phase diagrams.</strong>
+                  Run large ensembles of MD jobs with Parsl, use thermodynamic integration for accurate free energies,
+                  and convert the results into CALPHAD-compatible phase-diagram data.
+                </li>
+                <li>
+                  <strong>Module II: nucleation and growth kinetics.</strong>
+                  Apply persistent-embryo and solid-liquid coexistence simulations to estimate nucleation rates,
+                  phase-selection tendencies, and orientation-dependent growth behavior.
+                </li>
+                <li>
+                  <strong>Module III: liquid structure and dynamics.</strong>
+                  Analyze local order, cluster similarity, clique motifs, and atomic mobility in liquids to connect
+                  finite-temperature structure to synthesizability and pathway selection.
+                </li>
+              </ul>
+            </div>
+            <figure class="media-panel thrust-overview-figure">
+              <img src="assets/thrust2-workflow.png" alt="Thrust 2 workflow connecting LAMMPS, molecular dynamics, ab initio training, Parsl, thermodynamics, liquid structure, and kinetics" />
+              <figcaption>Thrust 2 workflow for exascale thermodynamics, phase diagrams, and synthesis-pathway prediction.</figcaption>
+            </figure>
+          </div>
+
+          <div class="thrust-subsection">
+            <div class="thrust-copy">
+              <h4>Research progress</h4>
+              <p>
+                The phase diagram based on precise free energy calculations provides essential guidance for materials
+                synthesis. The thermodynamic integration technique is highly accurate for free energy calculations, yet
+                it is also resource-demanding. For instance, hundreds of MD jobs are required to map out the free energy
+                of a binary solution phase as a function of temperature and composition. The team has set up a framework
+                that uses Parsl, an open-source Python library for parallel programming, to efficiently manage MD jobs
+                according to the available resources. Demonstrations for Al-Sm liquid show nearly ideal strong scaling
+                for free-energy calculations and provide mixing Gibbs free energy data that can be used in CALPHAD
+                modeling to obtain phase-boundary information.
+              </p>
+            </div>
+            <figure class="media-panel thrust-progress-wide">
+              <img src="assets/thrust2-research-progress.png" alt="Thrust 2 research progress figure showing GPU scaling and Al-Sm liquid free-energy calculations" />
+              <figcaption>Temporary Thrust 2 progress figure from the Ames Lab research page; this will be replaced once a high-resolution version is available.</figcaption>
+            </figure>
+          </div>
+
+          <div class="thrust-subsection thrust-publication-note">
+            <div>
+              <h4>Paper and code</h4>
+              <p>
+                The exa-PD workflow is available as open-source code and described in a public preprint. The release
+                supports massively parallel molecular-dynamics based free-energy calculations and CALPHAD-compatible
+                phase-diagram construction.
+              </p>
+            </div>
+            <div class="thrust-link-row">
+              <a href="https://arxiv.org/abs/2510.01400">Paper</a>
+              <a href="https://github.com/ML-AMD/exa-pd">GitHub</a>
+              <a href="https://www.osti.gov/biblio/code-173852">OSTI</a>
+              <a href="https://ml-amd.github.io/exa-pd/">Docs</a>
+            </div>
+          </div>
         </article>
       </section>
 

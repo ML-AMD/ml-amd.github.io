@@ -1,31 +1,73 @@
-# MLAMD Center Website Prototype | Multi-Page Option
+# MLAMD Center Website
 
-Static local prototype for the exa-AMD / exa-PD CMS project website.
+This repository hosts the public website for the CMS Center for Machine Learning Accelerated Materials Discovery (MLAMD):
 
-This option makes each major top-navigation item an independent page:
-`thrusts.html`, `progress.html`, `publications.html`, `data.html`, `people.html`,
-and `roadmap.html`, with `index.html` serving as the landing/overview page.
+https://ml-amd.github.io/
+
+The site presents the center's scientific vision, current research progress, publications, software, data products, team members, and future roadmap. It is intended to complement the Ames National Laboratory center page by providing a project-maintained technical microsite that can be updated quickly as exa-AMD, exa-PD, datasets, and publications evolve.
+
+## What this website is for
+
+The website is designed for several audiences:
+
+- Researchers who want to understand the scientific ideas behind AI/ML-assisted materials discovery and exascale phase-diagram prediction.
+- DOE program managers and reviewers who need a clear view of project progress, deliverables, publications, and future directions.
+- Collaborators and users who want access to released software, documentation, datasets, and citable records.
+- Project members who need a central public-facing record of people, thrusts, progress, and community engagement.
+
+## Main content
+
+- `index.html` - landing page and project overview.
+- `thrusts.html` - Thrust 1 exa-AMD and Thrust 2 exa-PD research workflows, modules, progress, and code links.
+- `progress.html` - recent outcomes, meetings, conference activity, and visible project momentum.
+- `publications.html` - papers, preprints, manuscripts, and workflow outputs.
+- `data.html` - software, datasets, databases, OSTI records, Zenodo records, GitHub repositories, and documentation links.
+- `people.html` - leadership, key personnel, research team members, oversight committee, and advisory committee.
+- `roadmap.html` - near-term plans and DOE-relevant future impact.
+
+## Related resources
+
+- Ames Lab center page: https://www.ameslab.gov/machine-learning-accelerated-materials-discovery-center
+- ISU ML materials page: https://ml-material.physics.iastate.edu/
+- exa-AMD documentation: https://ml-amd.github.io/exa-amd/
+- exa-PD documentation: https://ml-amd.github.io/exa-pd/
+- exa-AMD code: https://github.com/ML-AMD/exa-amd
+- exa-PD code: https://github.com/ML-AMD/exa-pd
 
 ## Local preview
 
-Open `index.html` directly in a browser, or run a small static server from this directory:
+From `/Users/weiyixia/Documents/Code`, run:
 
 ```bash
-python3 -m http.server 4173
+./preview-mlamd-sites.sh start --no-open
 ```
 
-Then visit `http://localhost:4173`.
+Then preview the published multi-page site at:
 
-## Content sources used
+```text
+http://127.0.0.1:4173/
+```
 
-- Existing Ames Lab center page and ISU ML materials page.
-- Ames Lab MLAMD people page for team photos, titles, and institutions.
-- `exa-amd` repository README, JOSS paper source, docs images, and citation metadata.
-- Local CMS posters for Thrust 1 and Thrust 2.
-- Local Thrust 1 supplemental proposal draft.
-- `references/notes/progress_import_2026-05-12.md`.
-- Generated hero image: `assets/hero-mlamd-ai-exascale.png`.
+The helper script also serves the single-page prototype at `http://127.0.0.1:4172/` and the Ames-template option at `http://127.0.0.1:4174/`.
 
-## Deployment direction
+For a minimal preview from this repository directory only:
 
-See `HOSTING_STRATEGY.md` for the recommended Ames Lab plus technical microsite hosting plan.
+```bash
+python3 -m http.server 4173 --bind 127.0.0.1
+```
+
+## Deployment
+
+This repository is the GitHub Pages repository for the ML-AMD organization. The intended public URL is:
+
+```text
+https://ml-amd.github.io/
+```
+
+The site is static HTML, CSS, JavaScript, and image assets. No build step is required for GitHub Pages once the generated multi-page files are committed to the repository root.
+
+## Maintenance
+
+The canonical editable source is kept locally in `exa-cms-website/`, with generated variants in `exa-cms-website-single-page/` and `exa-cms-website-multi-page/`. The current public repository uses the multi-page version.
+
+Maintained by Weiyi Xia.
