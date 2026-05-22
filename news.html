@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>News | MLAMD Center</title>
+    <meta name="description" content="MLAMD Center project page." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="MLAMD Center home">
+        <img class="brand-logo" src="assets/doe-seal.png" alt="U.S. Department of Energy seal" />
+        <span>
+          <strong>MLAMD Center</strong>
+          <small>AI/ML + exascale computing</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Overview</a>
+        <a href="research.html">Research</a>
+        <a class="is-active" href="news.html">News</a>
+        <a href="publications.html">Publications</a>
+        <a href="data.html">Data</a>
+        <a href="people.html">People</a>
+        <a href="roadmap.html">Roadmap</a>
+      </nav>
+    </header>
+    <main id="top">
+      <section class="people-hero page-hero">
+        <div>
+          <p class="eyebrow">News and activities</p>
+          <h1>Latest updates from the MLAMD Center</h1>
+          <p class="lead">Recent research directions, meetings, publications, software releases, datasets, and project news from the MLAMD Center.</p>
+        </div>
+      </section>
+<section id="news" class="section progress">
+        <div class="section-heading">
+          <p class="eyebrow">News and activities</p>
+          <h2>Latest updates and project activities</h2>
+        </div>
+        <div class="progress-layout">
+          <div class="timeline">
+            <article>
+              <span>Next</span>
+              <h3>Agentic workflow layer</h3>
+              <p>
+                A supervised AI controller will help choose scientific next steps and manage HPC execution decisions
+                such as task batching, retries, queue monitoring, CPU/GPU allocation, and provenance tracking.
+              </p>
+            </article>
+            <article>
+              <span>May 2026</span>
+              <h3>Beyond-ternary discovery pipeline</h3>
+              <p>
+                The current Thrust 1 effort extends the workflow from demonstrated ternary searches to multicomponent
+                motif libraries, MLIP relaxation, DFT validation, and disorder-aware search.
+              </p>
+            </article>
+            <article>
+              <span>Mar. 15-20, 2026</span>
+              <h3>APS Global Physics Summit presentation</h3>
+              <p>
+                The project reached the APS Global Physics Summit program, extending visibility for MLAMD progress
+                across the condensed-matter and materials-physics community.
+                <a href="https://summit.aps.org/smt/2026/events/MAR-B46/10">Session listing</a>
+              </p>
+            </article>
+            <article>
+              <span>Mar. 2026</span>
+              <h3>exa-AMD Module 2 milestone</h3>
+              <p>
+                Thrust 1 advanced the next exa-AMD module toward MLIP-assisted relaxation, adaptive search, and
+                higher-order composition-space exploration.
+              </p>
+            </article>
+            <article>
+              <span>Feb. 2026</span>
+              <h3>exa-PD phase-diagram workflow</h3>
+              <p>
+                Thrust 2 has a working Module I story for massively parallel MD-based free-energy calculations,
+                phase-diagram construction, and CALPHAD-compatible thermodynamic output.
+              </p>
+            </article>
+            <article>
+              <span>Late 2025</span>
+              <h3>exa-AMD released and published</h3>
+              <p>
+                The project released exa-AMD as open-source software and published the JOSS software paper,
+                establishing a citable workflow foundation for community use.
+              </p>
+            </article>
+            <article>
+              <span>Aug. 11-12, 2025</span>
+              <h3>DOE BES PI Meeting</h3>
+              <p>
+                The center shared progress through the 2025 EFRC-Hub-CMS-CCS PI Meeting, connecting exa-AMD and
+                exa-PD developments with the broader BES computational materials science community.
+                <a href="https://science.osti.gov/-/media/bes/efrc/pdf/PI-Meetings/2025-EFRC-Hub-CMS-CCS-PI-Meeting-Program-Book.pdf">Program book</a>
+              </p>
+            </article>
+            <article>
+              <span>June 4, 2025</span>
+              <h3>GPN Annual Meeting work update</h3>
+              <p>
+                Ames National Laboratory presented CMS Center work on accelerating functional-materials discovery
+                using AI/ML and exascale computing, with poster talks and handouts highlighting Thrusts 1 and 2.
+                <a href="https://www.greatplains.net/gpn-annual-meeting-2025/">Meeting page</a>
+              </p>
+            </article>
+          </div>
+          <div class="evidence-stack">
+            <figure class="media-panel">
+              <img src="assets/exa-amd-scaling.png" alt="exa-AMD scaling plot showing near-linear performance as GPUs increase" />
+              <figcaption>Benchmarking from CMS materials shows strong scaling behavior for exa-AMD workflows.</figcaption>
+            </figure>
+            <figure class="media-panel">
+              <img src="assets/exa-pd-cuzr-phase.png" alt="Calculated Cu-Zr phase diagram from exa-PD workflow" />
+              <figcaption>exa-PD demonstration output: calculated Cu-Zr phase behavior from MD and thermodynamic modeling.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      
+    </main>
+    <footer class="site-footer">
+      <div>
+        <strong>MLAMD Center</strong>
+        <p>Supported by the U.S. Department of Energy, Office of Science, Basic Energy Sciences, Materials Science and Engineering Division through the Computational Materials Science Center program.</p>
+        <p class="maintainer">Maintained by <a href="https://shdejavu.github.io/">Weiyi Xia</a>.</p>
+      </div>
+      <nav aria-label="Related links">
+        <a href="https://www.ameslab.gov/machine-learning-accelerated-materials-discovery-center">Ames Lab center page</a>
+        <a href="https://ml-material.physics.iastate.edu/">ISU ML materials page</a>
+        <a href="https://ml-amd.github.io/exa-amd/">exa-AMD documentation</a>
+        <a href="https://ml-amd.github.io/exa-pd/">exa-PD documentation</a>
+      </nav>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
